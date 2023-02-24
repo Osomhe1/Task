@@ -30,7 +30,7 @@ export default function TableData() {
   const tableHead =(data) => {
     return (
       <>
-        <TableContainer className="mb-8">
+        <TableContainer className="mb-8 h-[20%] w-full ">
           <Table>
             <TableHead>
               <tr>
@@ -131,7 +131,7 @@ export default function TableData() {
   const tableHead2 =(data) => {
     return (
       <>
-        <TableContainer className="mb-8">
+        <TableContainer className="mb-8 h-[15%]">
           <Table>
             <TableHead>
               <tr>
@@ -221,7 +221,7 @@ export default function TableData() {
   const tableHead3 =(data) => {
     return (
       <>
-        <TableContainer className="mb-8">
+        <TableContainer className="mb-8 h-[15%]">
           <Table>
             <TableHead>
               <tr>
@@ -306,7 +306,7 @@ export default function TableData() {
   const tableHead4 =(data) => {
     return (
       <>
-        <TableContainer className="mb-8">
+        <TableContainer className="mb-8 h-[15%]">
           <Table>
             <TableHead>
               <tr>
@@ -433,93 +433,93 @@ export default function TableData() {
 
 
   return (
-    <div>
+    <div className="h-screen">
       <div className=" flex flex-ro items-center justify-around bg-black">
         <div className="">
-          <Link to='/'> {<HomeIcon />} </Link>
+          <Link to="/"> {<HomeIcon />} </Link>
         </div>
         <div className="">
-
-        <PopUp
-          setSurnName={setSurnName}
-          setId={setId}
-          setMiddleName={setMiddleName}
-          setCountry={setCountry}
-          setFirstName={setFirstName}
-          surnName={surnName}
-          firstName={firstName}
-          id={id}
-          middleName={middleName}
-          country={country}
-          input={input}
-          setInput={setInput}
-          handleSearch={handleSearch}
-        />
+          <PopUp
+            setSurnName={setSurnName}
+            setId={setId}
+            setMiddleName={setMiddleName}
+            setCountry={setCountry}
+            setFirstName={setFirstName}
+            surnName={surnName}
+            firstName={firstName}
+            id={id}
+            middleName={middleName}
+            country={country}
+            input={input}
+            setInput={setInput}
+            handleSearch={handleSearch}
+          />
         </div>
       </div>
 
       {/* Table 1 */}
-      <div className=" flex  items-left  bg-purple-200">
-        <h4 className="m-3">Person</h4>
+      <div className="h-screen">
+        <div className=" flex  items-left  bg-purple-200">
+          <h4 className="m-3">Person</h4>
+        </div>
+
+        {tableHead()}
+
+        {/* Table 2 */}
+        <div className=" flex items-left  bg-purple-200">
+          <div className="w-1/5 border-r-4 ml-7">
+            <div className="flex justify-between  items-center">
+              <h4 className="m-3">Numbers</h4>
+              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+            </div>
+          </div>
+          <div className="w-1/5 border-r-4 ">
+            <div className="flex justify-between  items-center">
+              <h4 className="m-3">Description</h4>
+              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+            </div>
+          </div>
+          <div className="w-2/5 border-r-4  ">
+            <div className="flex justify-between  items-center">
+              <h4 className="m-3">Countries</h4>
+              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+            </div>
+          </div>
+          <div className="w-1/5 border-r-4  ">
+            <div className="flex justify-between  items-center">
+              <h4 className="m-3">Dates</h4>
+              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+            </div>
+          </div>
+        </div>
+
+        {tableHead2()}
+
+        {/* Table 3 */}
+        <div className=" flex items-left   bg-purple-200">
+          <div className="w-2/5 ml-7 border-r-4  ">
+            <div className="flex justify-between  items-center">
+              <h4 className="m-3">Saction</h4>
+              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+            </div>
+          </div>
+          <div className="w-3/5">
+            <div className="flex justify-between  items-center">
+              <h4 className="m-3">Role</h4>
+              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+            </div>
+          </div>
+        </div>
+
+        {tableHead3()}
+
+        {/* Table 4 */}
+        <div className=" flex  items-left  bg-purple-200">
+          <h4 className="m-3">Associates</h4>
+        </div>
+
+        {tableHead4()}
       </div>
-
-      {tableHead()}
-
-      {/* Table 2 */}
-      <div className=" flex items-left  bg-purple-200">
-        <div className="w-1/5 border-r-4 ml-7">
-          <div className="flex justify-between  items-center">
-            <h4 className="m-3">Numbers</h4>
-            <div className="border-2 bg-white w-[30px] h-[30px]"></div>
-          </div>
-        </div>
-        <div className="w-1/5 border-r-4 ">
-          <div className="flex justify-between  items-center">
-            <h4 className="m-3">Description</h4>
-            <div className="border-2 bg-white w-[30px] h-[30px]"></div>
-          </div>
-        </div>
-        <div className="w-2/5 border-r-4  ">
-          <div className="flex justify-between  items-center">
-            <h4 className="m-3">Countries</h4>
-            <div className="border-2 bg-white w-[30px] h-[30px]"></div>
-          </div>
-        </div>
-        <div className="w-1/5 border-r-4  ">
-          <div className="flex justify-between  items-center">
-            <h4 className="m-3">Dates</h4>
-            <div className="border-2 bg-white w-[30px] h-[30px]"></div>
-          </div>
-        </div>
-      </div>
-
-      {tableHead2()}
-
-      {/* Table 3 */}
-      <div className=" flex items-left   bg-purple-200">
-        <div className="w-2/5 ml-7 border-r-4  ">
-          <div className="flex justify-between  items-center">
-            <h4 className="m-3">Saction</h4>
-            <div className="border-2 bg-white w-[30px] h-[30px]"></div>
-          </div>
-        </div>
-        <div className="w-3/5">
-          <div className="flex justify-between  items-center">
-            <h4 className="m-3">Role</h4>
-            <div className="border-2 bg-white w-[30px] h-[30px]"></div>
-          </div>
-        </div>
-      </div>
-
-      
-      {tableHead3()}
-
-      {/* Table 4 */}
-      <div className=" flex  items-left  bg-purple-200">
-        <h4 className="m-3">Associates</h4>
-      </div>
-      
-      {tableHead4()}
     </div>
   )
 }
