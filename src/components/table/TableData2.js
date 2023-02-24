@@ -11,7 +11,7 @@ import {
 } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home'
 import { Link } from 'react-router-dom'
-import ImageModal from '../ImageModal'
+import LinkModal from '../LinkModal'
 
 export default function TableData() {
 
@@ -116,7 +116,7 @@ export default function TableData() {
                         className="h-[15px] w-[15px]"
                         alt=""
                       /> */}
-                      <ImageModal />
+                      <LinkModal />
                     </div>
                   </TableCell>
                 </TableRow>
@@ -124,6 +124,8 @@ export default function TableData() {
             </TableBody>
           </Table>
         </TableContainer>
+
+        
       </>
     )
   }
