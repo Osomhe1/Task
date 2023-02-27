@@ -12,6 +12,7 @@ import {
 import HomeIcon from '@mui/icons-material/Home'
 import { Link } from 'react-router-dom'
 import LinkModal from '../LinkModal'
+import './table.css'
 
 export default function TableData() {
 
@@ -30,7 +31,7 @@ export default function TableData() {
   const tableHead =(data) => {
     return (
       <>
-        <TableContainer className="mb-8 h-[20%]">
+        <TableContainer className="mb-8 h-[20%] w-full">
           <Table>
             <TableHead>
               <tr>
@@ -458,7 +459,7 @@ export default function TableData() {
       </div>
 
       {/* Table 1 */}
-      <div className="h-screen">
+      <div className="h-screen tables">
         <div className=" flex  items-left  bg-purple-200">
           <h4 className="m-3">Person</h4>
         </div>

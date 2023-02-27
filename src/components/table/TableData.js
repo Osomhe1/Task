@@ -12,6 +12,7 @@ import {
 import HomeIcon from '@mui/icons-material/Home'
 import { Link } from 'react-router-dom'
 import ImageModal from '../ImageModal'
+import './table.css'
 
 export default function TableData() {
 
@@ -31,41 +32,67 @@ export default function TableData() {
     return (
       <>
         <TableContainer className="mb-8 h-[20%] w-full ">
-          <Table>
+          <Table className=" ">
             <TableHead>
               <tr>
-                <TableCell>ID</TableCell>
-                <TableCell>Action</TableCell>
-                <TableCell>Date activation</TableCell>
-                <TableCell>Gender</TableCell>
-                <TableCell>ActiveStatus</TableCell>
-                <TableCell>Deceerd</TableCell>
-                <TableCell>BirthPlace</TableCell>
-                <TableCell>Address_line</TableCell>
-                <TableCell>Address_city</TableCell>
-                <TableCell>Address_country</TableCell>
-                <TableCell>NameType</TableCell>
-                <TableCell>FirstName</TableCell>
-                <TableCell>middleName</TableCell>
-                <TableCell>Surnname</TableCell>
-                <TableCell>medianName</TableCell>
-                <TableCell>Suffix</TableCell>
-                <TableCell>option</TableCell>
+                <TableCell
+                  className="w-[20px]"
+                >
+                  ID
+                </TableCell>
+                <TableCell
+                  className="w-[20px]"
+                >
+                  Action
+                </TableCell>
+                <TableCell
+                  className="w-[20px]"
+                >
+                  Date activation
+                </TableCell>
+                <TableCell
+                  className="w-[10px]"
+                >
+                  Gender
+                </TableCell>
+                <TableCell
+                  className="w-[20px]"
+                >
+                  ActiveStatus
+                </TableCell>
+                <TableCell className="w-[20px]">Deceerd</TableCell>
+                <TableCell className="w-[20px]">BirthPlace</TableCell>
+                <TableCell className="w-[20px]">Address_line</TableCell>
+                <TableCell className="w-[20px]">Address_city</TableCell>
+                <TableCell className="w-[20px]">Address_country</TableCell>
+                <TableCell className="w-[20px]">NameType</TableCell>
+                <TableCell className="w-[20px]">FirstName</TableCell>
+                <TableCell className="w-[20px]">middleName</TableCell>
+                <TableCell className="w-[20px]">Surnname</TableCell>
+                <TableCell className="w-[20px]">medianName</TableCell>
+                <TableCell className="w-[20px]">Suffix</TableCell>
+                <TableCell className="w-[20px]">option</TableCell>
               </tr>
             </TableHead>
             <TableBody>
               {input?.map((x, key) => (
-                <TableRow key={key}>
-                  <TableCell>
-                    <span className="text-sm">{x?.id}</span>
+                <TableRow className="w-[90%] " key={key}>
+                  <TableCell
+                    className="w-[20px]"
+                  >
+                    <span className="text-sm w-[20px] ">{x?.id}</span>
                   </TableCell>
-                  <TableCell>
+                  <TableCell
+                    className="w-[20px]" >
                     <span className="text-sm">{x?.action}</span>
                   </TableCell>
-                  <TableCell>
+                  <TableCell
+                    className="w-[20px]"
+                 
+                  >
                     <span className="text-sm">{x?.date_activation}</span>
                   </TableCell>
-                  <TableCell>
+                  <TableCell >
                     <span className="text-sm">{x?.gender}</span>
                   </TableCell>
                   <TableCell>
@@ -433,7 +460,7 @@ export default function TableData() {
 
 
   return (
-    <div className="h-screen">
+    <div className="h-screen ">
       <div className=" flex flex-ro items-center justify-around bg-black">
         <div className="">
           <Link to="/"> {<HomeIcon />} </Link>

@@ -99,32 +99,55 @@ export default function Home() {
                 </tr>
               </TableHead>
               <TableBody>
-                <TableRow>
+                <TableRow className="text-sm hover:bg-gray-400">
                   <TableCell>
-                    <h3 className="text-sm hover:bg-gray-400"> ACM</h3>
-                    <h3 className="text-sm hover:bg-gray-400"> ACM</h3>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table"
+                    >
+                      <h3 className="text-sm "> ACM</h3>
+                    </Link>
                   </TableCell>
                   <TableCell>
-                    <h3 className="text-sm hover:bg-gray-400">10</h3>
-                    <h3 className="text-sm hover:bg-gray-400">23</h3>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table"
+                    >
+                      {' '}
+                      <h3 className="text-sm ">10</h3>
+                    </Link>
                   </TableCell>
                   <TableCell>
-                    <h3 className="text-sm hover:bg-gray-400">Open</h3>
-                    <h3 className="text-sm hover:bg-gray-400">Open</h3>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table"
+                    >
+                      <h3 className="text-sm ">Open</h3>
+                    </Link>
                   </TableCell>
                   <TableCell>
-                    <h3 className="text-sm hover:bg-gray-400">Person</h3>
-                    <h3 className="text-sm hover:bg-gray-400">Exacl</h3>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table"
+                    >
+                      <h3 className="text-sm ">Person</h3>
+                    </Link>
                   </TableCell>
                   <TableCell>
-                    <h3 className="text-sm hover:bg-gray-400">perdonal</h3>
-                    <h3 className="text-sm hover:bg-gray-400">
-                      Excal perdonal
-                    </h3>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table"
+                    >
+                      <h3 className="text-sm ">perdonal</h3>
+                    </Link>
                   </TableCell>
                   <TableCell>
-                    <h3 className="text-sm hover:bg-gray-400">Admin</h3>
-                    <h3 className="text-sm hover:bg-gray-400">Admin</h3>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table"
+                    >
+                      <h3 className="text-sm ">Admin</h3>
+                    </Link>
                   </TableCell>
 
                   <TableCell>
@@ -136,6 +159,62 @@ export default function Home() {
                           alt=""
                         />
                       </Link>
+                    </div>
+                  </TableCell>
+                </TableRow>
+                <TableRow className="text-sm hover:bg-gray-400">
+                  <TableCell>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table2"
+                    >
+                      <h3 className="text-sm "> ACM</h3>
+                    </Link>
+                  </TableCell>
+
+                  <TableCell>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table2"
+                    >
+                      <h3 className="text-sm ">23</h3>
+                    </Link>
+                  </TableCell>
+                  <TableCell>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table2"
+                    >
+                      <h3 className="text-sm ">Open</h3>
+                    </Link>
+                  </TableCell>
+                  <TableCell>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table2"
+                    >
+                      <h3 className="text-sm ">Exacl</h3>
+                    </Link>
+                  </TableCell>
+                  <TableCell>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table2"
+                    >
+                      <h3 className="text-sm ">Excal perdonal</h3>
+                    </Link>
+                  </TableCell>
+                  <TableCell>
+                    <Link
+                      className="no-underline hover:no-underline"
+                      to="/table2"
+                    >
+                      <h3 className="text-sm ">Admin</h3>
+                    </Link>
+                  </TableCell>
+
+                  <TableCell>
+                    <div className="grid gap-3 items-center cursor-pointer ">
                       <Link to="/table2">
                         <img
                           src="https://i.ibb.co/m0C7yh7/grid.png"
@@ -149,10 +228,10 @@ export default function Home() {
               </TableBody>
             </Table>
           </TableContainer>
-        <p className="m-4 float-right">
-          Rekordow: <span>2</span> Strona: <span>1</span> Inne:{' '}
-          <span className="text-red-500">(1)</span>
-        </p>
+          <p className="m-4 float-right">
+            Rekordow: <span>2</span> Strona: <span>1</span> Inne:{' '}
+            <span className="text-red-500">(1)</span>
+          </p>
         </div>
       </section>
     </div>
