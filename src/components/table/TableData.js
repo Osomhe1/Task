@@ -32,67 +32,75 @@ export default function TableData() {
     return (
       <>
         <TableContainer className="mb-8 h-[20%] w-full ">
-          <Table className=" ">
+          <Table className="  ">
             <TableHead>
-              <tr>
-                <TableCell
-                  className="w-[20px]"
-                >
+              <tr className=" gap-2  ">
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   ID
                 </TableCell>
-                <TableCell
-                  className="w-[20px]"
-                >
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   Action
                 </TableCell>
-                <TableCell
-                  className="w-[20px]"
-                >
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   Date activation
                 </TableCell>
-                <TableCell
-                  className="w-[10px]"
-                >
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   Gender
                 </TableCell>
-                <TableCell
-                  className="w-[20px]"
-                >
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   ActiveStatus
                 </TableCell>
-                <TableCell className="w-[20px]">Deceerd</TableCell>
-                <TableCell className="w-[20px]">BirthPlace</TableCell>
-                <TableCell className="w-[20px]">Address_line</TableCell>
-                <TableCell className="w-[20px]">Address_city</TableCell>
-                <TableCell className="w-[20px]">Address_country</TableCell>
-                <TableCell className="w-[20px]">NameType</TableCell>
-                <TableCell className="w-[20px]">FirstName</TableCell>
-                <TableCell className="w-[20px]">middleName</TableCell>
-                <TableCell className="w-[20px]">Surnname</TableCell>
-                <TableCell className="w-[20px]">medianName</TableCell>
-                <TableCell className="w-[20px]">Suffix</TableCell>
-                <TableCell className="w-[20px]">option</TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Deceerd
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  BirthPlace
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Address_line
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Address_city
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Address_country
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  NameType
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  FirstName
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  middleName
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Surnname
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  medianName
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Suffix
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  option
+                </TableCell>
               </tr>
             </TableHead>
             <TableBody>
               {input?.map((x, key) => (
                 <TableRow className="w-[90%] " key={key}>
-                  <TableCell
-                    className="w-[20px]"
-                  >
+                  <TableCell className="w-[20px]">
                     <span className="text-sm w-[20px] ">{x?.id}</span>
                   </TableCell>
-                  <TableCell
-                    className="w-[20px]" >
+                  <TableCell className="w-[20px]">
                     <span className="text-sm">{x?.action}</span>
                   </TableCell>
-                  <TableCell
-                    className="w-[20px]"
-                 
-                  >
+                  <TableCell className="w-[20px]">
                     <span className="text-sm">{x?.date_activation}</span>
                   </TableCell>
-                  <TableCell >
+                  <TableCell>
                     <span className="text-sm">{x?.gender}</span>
                   </TableCell>
                   <TableCell>
@@ -162,23 +170,57 @@ export default function TableData() {
           <Table>
             <TableHead>
               <tr>
-                <TableCell>ID</TableCell>
-                <TableCell>Doc Type</TableCell>
-                <TableCell>Value</TableCell>
-                <TableCell>Notes</TableCell>
-                <TableCell>id</TableCell>
-                <TableCell>DeceerdID</TableCell>
-                <TableCell>Description</TableCell>
-                <TableCell>id</TableCell>
-                <TableCell>Country Type</TableCell>
-                <TableCell>Country Code</TableCell>
-                <TableCell>Name</TableCell>
-                <TableCell>islecopy</TableCell>
-                <TableCell>ph code</TableCell>
-                <TableCell>id</TableCell>
-                <TableCell>Date type</TableCell>
-                <TableCell>Date</TableCell>
-                <TableCell>Date PM</TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  ID
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Doc Type
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Value
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Notes
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  id
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  DeceerdID
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Description
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  id
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Country Type
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Country Code
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Name
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  islecopy
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  ph code
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  id
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Date type
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Date
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Date PM
+                </TableCell>
               </tr>
             </TableHead>
             <TableBody>
@@ -252,22 +294,54 @@ export default function TableData() {
           <Table>
             <TableHead>
               <tr>
-                <TableCell>ID</TableCell>
-                <TableCell>List Code</TableCell>
-                <TableCell>Start Date</TableCell>
-                <TableCell>Date Stop</TableCell>
-                <TableCell>Name</TableCell>
-                <TableCell>Status</TableCell>
-                <TableCell>RT</TableCell>
-                <TableCell>Descr2</TableCell>
-                <TableCell>Descr1</TableCell>
-                <TableCell>id</TableCell>
-                <TableCell>RoleType</TableCell>
-                <TableCell>Start date</TableCell>
-                <TableCell>Stop date</TableCell>
-                <TableCell>Code</TableCell>
-                <TableCell>Name</TableCell>
-                <TableCell>Take</TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  ID
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  List Code
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Start Date
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Date Stop
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Name
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Status
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  RT
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Descr2
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Descr1
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  id
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  RoleType
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Start date
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Stop date
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Code
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Name
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Take
+                </TableCell>
               </tr>
             </TableHead>
             <TableBody>
@@ -337,29 +411,75 @@ export default function TableData() {
           <Table>
             <TableHead>
               <tr>
-                <TableCell>ID</TableCell>
-                <TableCell>Assoc Id</TableCell>
-                <TableCell>Ex </TableCell>
-                <TableCell>Type</TableCell>
-                <TableCell>Red Name</TableCell>
-                <TableCell>Action</TableCell>
-                <TableCell>Date action</TableCell>
-                <TableCell>Gender</TableCell>
-                <TableCell>ActiveStatus</TableCell>
-                <TableCell>Deceased</TableCell>
-                <TableCell>Address_line</TableCell>
-                <TableCell>Address_City</TableCell>
-                <TableCell>Address_Country</TableCell>
-                <TableCell>NameType</TableCell>
-                <TableCell>Tickhoc</TableCell>
-                <TableCell>BirthPlace</TableCell>
-                <TableCell>FirstName</TableCell>
-                <TableCell>middleName</TableCell>
-                <TableCell>Surnname</TableCell>
-                <TableCell>medianName</TableCell>
-                <TableCell>Surffix</TableCell>
-                <TableCell>SinglarName</TableCell>
-                <TableCell>option</TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  ID
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Assoc Id
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Ex{' '}
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Type
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Red Name
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Action
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Date action
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Gender
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  ActiveStatus
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Deceased
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Address_line
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Address_City
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Address_Country
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  NameType
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Tickhoc
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  BirthPlace
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  FirstName
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  middleName
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Surnname
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  medianName
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Surffix
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  SinglarName
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  option
+                </TableCell>
               </tr>
             </TableHead>
             <TableBody>
