@@ -13,6 +13,13 @@ import HomeIcon from '@mui/icons-material/Home'
 import { Link } from 'react-router-dom'
 import LinkModal from '../LinkModal'
 import './table.css'
+import { makeStyles } from '@mui/styles'
+
+const useStyles = makeStyles({
+  activeRow: {
+    backgroundColor: 'yellow',
+  },
+})
 
 export default function TableData() {
 
@@ -22,6 +29,12 @@ export default function TableData() {
   const [middleName, setMiddleName] = useState('')
   const [id, setId] = useState('')
   const [country, setCountry] = useState('')
+  const [activeRow, setActiveRow] = useState(null)
+  const classes = useStyles()
+
+  const handleRowClick = (index) => {
+    setActiveRow(index)
+  }
   
   const handleSearch = (searchResult) => {
     setInput([searchResult])
@@ -89,8 +102,14 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, key) => (
-                <TableRow key={key}>
+              {input?.map((x, index) => (
+                <TableRow
+                  key={index}
+                  onClick={() => handleRowClick(index)}
+                  className={
+                    index === activeRow ? classes.activeRow : `w-[90%]`
+                  }
+                >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
                   </TableCell>
@@ -224,8 +243,14 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, key) => (
-                <TableRow key={key}>
+              {input?.map((x, index) => (
+                <TableRow
+                  key={index}
+                  onClick={() => handleRowClick(index)}
+                  className={
+                    index === activeRow ? classes.activeRow : `w-[90%]`
+                  }
+                >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
                   </TableCell>
@@ -345,8 +370,14 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, key) => (
-                <TableRow key={key}>
+              {input?.map((x, index) => (
+                <TableRow
+                  key={index}
+                  onClick={() => handleRowClick(index)}
+                  className={
+                    index === activeRow ? classes.activeRow : `w-[90%]`
+                  }
+                >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
                   </TableCell>
@@ -483,8 +514,14 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, key) => (
-                <TableRow key={key}>
+              {input?.map((x, index) => (
+                <TableRow
+                  key={index}
+                  onClick={() => handleRowClick(index)}
+                  className={
+                    index === activeRow ? classes.activeRow : `w-[90%]`
+                  }
+                >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
                   </TableCell>
