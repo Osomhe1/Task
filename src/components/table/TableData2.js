@@ -44,7 +44,7 @@ export default function TableData() {
   const tableHead =(data) => {
     return (
       <>
-        <TableContainer className="mb-8 h-[20%] w-full">
+        <TableContainer className=" h-[200px] overflow-auto w-full ">
           <Table>
             <TableHead>
               <tr>
@@ -182,10 +182,10 @@ export default function TableData() {
     )
   }
 
-  const tableHead2 =(data) => {
+  const tableHead2 = (data) => {
     return (
       <>
-        <TableContainer className="mb-8 h-[15%]">
+        <TableContainer className=" h-[200px] ">
           <Table>
             <TableHead>
               <tr>
@@ -198,6 +198,42 @@ export default function TableData() {
                 <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   Value
                 </TableCell>
+              </tr>
+            </TableHead>
+            <TableBody>
+              {input?.map((x, index) => (
+                <TableRow
+                  key={index}
+                  onClick={() => handleRowClick(index)}
+                  className={
+                    index === activeRow ? classes.activeRow : `w-[90%]`
+                  }
+                >
+                  <TableCell>
+                    <span className="text-sm">{x?.id}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.doc_type}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.value}</span>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </>
+    )
+  }
+
+  const tableHead2a = (data) => {
+    return (
+      <>
+        <TableContainer className=" h-[200px] ">
+          <Table>
+            <TableHead>
+              <tr>
                 <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   Notes
                 </TableCell>
@@ -210,6 +246,45 @@ export default function TableData() {
                 <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   Description
                 </TableCell>
+              </tr>
+            </TableHead>
+            <TableBody>
+              {input?.map((x, index) => (
+                <TableRow
+                  key={index}
+                  onClick={() => handleRowClick(index)}
+                  className={
+                    index === activeRow ? classes.activeRow : `w-[90%]`
+                  }
+                >
+                  <TableCell>
+                    <span className="text-sm">{x?.notes}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.id}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.deceerd_id}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.description}</span>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </>
+    )
+  }
+
+  const tableHead2b = (data) => {
+    return (
+      <>
+        <TableContainer className=" h-[200px] ">
+          <Table>
+            <TableHead>
+              <tr>
                 <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   id
                 </TableCell>
@@ -228,6 +303,51 @@ export default function TableData() {
                 <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   ph code
                 </TableCell>
+              </tr>
+            </TableHead>
+            <TableBody>
+              {input?.map((x, index) => (
+                <TableRow
+                  key={index}
+                  onClick={() => handleRowClick(index)}
+                  className={
+                    index === activeRow ? classes.activeRow : `w-[90%]`
+                  }
+                >
+                  <TableCell>
+                    <span className="text-sm">{x?.id}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.country_type}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.country_code}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.name}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.islecopy}</span>
+                  </TableCell>
+                  <TableCell>
+                    <span className="text-sm">{x?.ph_code}</span>
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </>
+    )
+  }
+
+  const tableHead2c = (data) => {
+    return (
+      <>
+        <TableContainer className=" h-[200px] ">
+          <Table>
+            <TableHead>
+              <tr>
                 <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   id
                 </TableCell>
@@ -255,45 +375,6 @@ export default function TableData() {
                     <span className="text-sm">{x?.id}</span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.doc_type}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.value}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.notes}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.id}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.deceerd_id}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.description}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.id}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.country_type}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.country_code}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.name}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.islecopy}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.ph_code}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.id}</span>
-                  </TableCell>
-                  <TableCell>
                     <span className="text-sm">{x?.date_type}</span>
                   </TableCell>
                   <TableCell>
@@ -311,11 +392,10 @@ export default function TableData() {
     )
   }
 
-
-  const tableHead3 =(data) => {
+  const tableHead3 = (data) => {
     return (
       <>
-        <TableContainer className="mb-8 h-[15%]">
+        <TableContainer className=" h-[200px] w-[100%] ">
           <Table>
             <TableHead>
               <tr>
@@ -345,27 +425,6 @@ export default function TableData() {
                 </TableCell>
                 <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
                   Descr1
-                </TableCell>
-                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
-                  id
-                </TableCell>
-                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
-                  RoleType
-                </TableCell>
-                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
-                  Start date
-                </TableCell>
-                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
-                  Stop date
-                </TableCell>
-                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
-                  Code
-                </TableCell>
-                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
-                  Name
-                </TableCell>
-                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
-                  Take
                 </TableCell>
               </tr>
             </TableHead>
@@ -405,6 +464,54 @@ export default function TableData() {
                   <TableCell>
                     <span className="text-sm">{x?.descr1}</span>
                   </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </TableContainer>
+      </>
+    )
+  }
+
+  const tableHead3b = (data) => {
+    return (
+      <>
+        <TableContainer className=" h-[200px] w-[100%]">
+          <Table>
+            <TableHead>
+              <tr>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  id
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  RoleType
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Start date
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Stop date
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Code
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Name
+                </TableCell>
+                <TableCell className="w-[] border-2 space-x-8 border-gray-400 ">
+                  Take
+                </TableCell>
+              </tr>
+            </TableHead>
+            <TableBody>
+              {input?.map((x, index) => (
+                <TableRow
+                  key={index}
+                  onClick={() => handleRowClick(index)}
+                  className={
+                    index === activeRow ? classes.activeRow : `w-[90%]`
+                  }
+                >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
                   </TableCell>
@@ -435,10 +542,10 @@ export default function TableData() {
     )
   }
 
-  const tableHead4 =(data) => {
+  const tableHead4 = (data) => {
     return (
       <>
-        <TableContainer className="mb-8 h-[15%]">
+        <TableContainer className=" h-[200px] overflow-auto ">
           <Table>
             <TableHead>
               <tr>
@@ -613,6 +720,7 @@ export default function TableData() {
   }
 
 
+
   useEffect(() => {}, [input])
 
 
@@ -642,67 +750,70 @@ export default function TableData() {
       </div>
 
       {/* Table 1 */}
-      <div className="h-screen tables">
-        <div className=" flex  items-left  bg-purple-200">
-          <h4 className="m-3">Person</h4>
+      <div className="h-">
+        <div className=" mb-6 ">
+          <div className=" flex  items-left  bg-purple-200">
+            <h4 className="m-3">Person</h4>
+          </div>
+          {tableHead()}
         </div>
-
-        {tableHead()}
 
         {/* Table 2 */}
-        <div className=" flex items-left  bg-purple-200">
-          <div className="w-1/5 border-r-4 ml-7">
-            <div className="flex justify-between  items-center">
-              <h4 className="m-3">Numbers</h4>
-              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+
+        <div className="lg:flex mb-6  w-1/1 gap-2  ">
+          <div className="border w-1/4 ">
+            <div className="bg-purple-200">
+              <h4 className="m- text-black ">Number</h4>
             </div>
+            <div className="overflow-auto   ">{tableHead2()}</div>
           </div>
-          <div className="w-1/5 border-r-4 ">
-            <div className="flex justify-between  items-center">
-              <h4 className="m-3">Description</h4>
-              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+          {/* Description */}
+          <div className="w-1/4">
+            <div className="bg-purple-200">
+              <h4 className="m- text-black">Description</h4>
             </div>
+            <div className="overflow-auto  ">{tableHead2a()}</div>
           </div>
-          <div className="w-2/5 border-r-4  ">
-            <div className="flex justify-between  items-center">
-              <h4 className="m-3">Countries</h4>
-              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+          {/* Country */}
+          <div className="w-2/4">
+            <div className="bg-purple-200">
+              <h4 className="m- text-black">Country</h4>
             </div>
+            <div className="overflow-auto  ">{tableHead2b()}</div>
           </div>
-          <div className="w-1/5 border-r-4  ">
-            <div className="flex justify-between  items-center">
-              <h4 className="m-3">Dates</h4>
-              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+          {/* Date */}
+          <div className="w-1/4">
+            <div className="bg-purple-200">
+              <h4 className="m- text-black">Date</h4>
             </div>
+            <div className="overflow-auto  ">{tableHead2c()}</div>
           </div>
         </div>
-
-        {tableHead2()}
 
         {/* Table 3 */}
-        <div className=" flex items-left   bg-purple-200">
-          <div className="w-2/5 ml-7 border-r-4  ">
-            <div className="flex justify-between  items-center">
-              <h4 className="m-3">Saction</h4>
-              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+        <div className="lg:flex mb-6 h- w-1/1 gap-2  ">
+          <div className="border w-3/5 ">
+            <div className="bg-purple-200">
+              <h4 className="m- text-black ">Saction</h4>
             </div>
+            <div className="overflow-auto   ">{tableHead3()}</div>
           </div>
-          <div className="w-3/5">
-            <div className="flex justify-between  items-center">
-              <h4 className="m-3">Role</h4>
-              <div className="border-2 bg-white w-[30px] h-[30px]"></div>
+          {/* role */}
+          <div className="">
+            <div className="bg-purple-200">
+              <h4 className="m- text-black">Role</h4>
             </div>
+            <div className="overflow-auto  ">{tableHead3b()}</div>
           </div>
         </div>
-
-        {tableHead3()}
 
         {/* Table 4 */}
-        <div className=" flex  items-left  bg-purple-200">
-          <h4 className="m-3">Associates</h4>
+        <div className=" mb-6 ">
+          <div className=" flex  items-left  bg-purple-200">
+            <h4 className="m-3">Associates</h4>
+          </div>
+          <div className="  ">{tableHead4()}</div>
         </div>
-
-        {tableHead4()}
       </div>
     </div>
   )
