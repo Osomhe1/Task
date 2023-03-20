@@ -8,20 +8,11 @@ import {
   TableBody,
   TableRow,
   TableContainer,
-  // makeStyles,
 } from '@mui/material'
 import HomeIcon from '@mui/icons-material/Home'
 import { Link } from 'react-router-dom'
 import ImageModal from '../ImageModal'
 import './table.css'
-// import  makeStyles  from '@mui/styles';
-import { makeStyles } from '@mui/styles'
-
-const useStyles = makeStyles({
-  activeRow: {
-    backgroundColor: 'yellow',
-  },
-});
 
 
 export default function TableData() {
@@ -34,12 +25,27 @@ export default function TableData() {
   const [country, setCountry] = useState('')
 
   const [activeRow, setActiveRow] = useState(null)
-  const classes = useStyles()
+  const [activeRowData, setActiveRowData] = useState(false)
+  const [items, setItems] = useState([]);
 
-  const handleRowClick = (index) => {
-    setActiveRow(index)
+  const handleRowClickColor = (id) => {
+    setActiveRow(id)
   }
   
+  const handleRowClick = (e) => {
+    const search = e.target.id;
+     input.forEach((cur) => {
+        if (cur.id == search) {
+          // setItems()
+          // setItems(cur => [...cur])
+          setItems(items.concat(cur))
+        }
+     })
+    setActiveRowData(true)
+    // setItems()
+  }
+
+
   const handleSearch = (searchResult) => {
     setInput([searchResult])
   }
@@ -106,19 +112,24 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, index) => (
+              {input?.map((x, id) => (
                 <TableRow
-                  onClick={() => handleRowClick(index)}
-                  className={
-                    index === activeRow ? classes.activeRow : `w-[90%]`
-                  }
-                  // className={`w-[90%] hover:bg-gray-400 focus:bg-green-500 active:bg-yellow-400 ${
-                  //   index === activeRow ? classes.activeRow : ''
-                  // }`}
-                  key={index}
+                  className={`bg-${activeRow === x.id ? 'active cursor-pointer  bg-yellow-400' : 'inactive cursor-pointer'}`}
+                  onClick={() => handleRowClickColor(x.id)}
+                  key={x.id}
                 >
-                  <TableCell className="w-[20px]">
-                    <span className="text-sm w-[20px] ">{x?.id}</span>
+                  <TableCell>
+                    <span
+                      onClick={
+                        (e) => handleRowClick(e)
+                        // handleRowClickData(x)
+                      }
+                      id={x.id}
+                      className="w-[20px]"
+                      // className="text-sm w-[20px] "
+                    >
+                      {x?.id}
+                    </span>
                   </TableCell>
                   <TableCell className="w-[20px]">
                     <span className="text-sm">{x?.action}</span>
@@ -172,11 +183,7 @@ export default function TableData() {
                         className="h-[25px] w-[25px]"
                         alt=""
                       />
-                      {/* <img
-                        src="https://i.ibb.co/7yjxWSv/share.png"
-                        className="h-[15px] w-[15px]"
-                        alt=""
-                      /> */}
+
                       <ImageModal />
                     </div>
                   </TableCell>
@@ -208,13 +215,11 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, index) => (
+              {items?.map((x) => (
                 <TableRow
-                  key={index}
-                  onClick={() => handleRowClick(index)}
-                  className={
-                    index === activeRow ? classes.activeRow : `w-[90%]`
-                  }
+                  key={x.id}
+                  onClick={() => handleRowClick(x.id)}
+                  
                 >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
@@ -256,13 +261,11 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, index) => (
+              {items?.map((x, index) => (
                 <TableRow
-                  key={index}
+                  key={x.id}
                   onClick={() => handleRowClick(index)}
-                  className={
-                    index === activeRow ? classes.activeRow : `w-[90%]`
-                  }
+                  
                 >
                   <TableCell>
                     <span className="text-sm">{x?.notes}</span>
@@ -313,13 +316,11 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, index) => (
+              {items?.map((x, index) => (
                 <TableRow
-                  key={index}
+                  key={x.id}
                   onClick={() => handleRowClick(index)}
-                  className={
-                    index === activeRow ? classes.activeRow : `w-[90%]`
-                  }
+                  
                 >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
@@ -370,13 +371,11 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, index) => (
+              {items?.map((x, index) => (
                 <TableRow
-                  key={index}
+                  key={x.id}
                   onClick={() => handleRowClick(index)}
-                  className={
-                    index === activeRow ? classes.activeRow : `w-[90%]`
-                  }
+                  
                 >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
@@ -437,13 +436,11 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, index) => (
+              {items?.map((x, index) => (
                 <TableRow
-                  key={index}
+                  key={x.id}
                   onClick={() => handleRowClick(index)}
-                  className={
-                    index === activeRow ? classes.activeRow : `w-[90%]`
-                  }
+                  
                 >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
@@ -512,13 +509,11 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, index) => (
+              {items?.map((x, index) => (
                 <TableRow
-                  key={index}
+                  key={x.id}
                   onClick={() => handleRowClick(index)}
-                  className={
-                    index === activeRow ? classes.activeRow : `w-[90%]`
-                  }
+                  
                 >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
@@ -629,13 +624,11 @@ export default function TableData() {
               </tr>
             </TableHead>
             <TableBody>
-              {input?.map((x, index) => (
+              {items?.map((x, index) => (
                 <TableRow
-                  key={index}
+                  key={x.id}
                   onClick={() => handleRowClick(index)}
-                  className={
-                    index === activeRow ? classes.activeRow : `w-[90%]`
-                  }
+                  
                 >
                   <TableCell>
                     <span className="text-sm">{x?.id}</span>
@@ -772,28 +765,36 @@ export default function TableData() {
             <div className="bg-purple-200">
               <h4 className="m- text-black ">Number</h4>
             </div>
-            <div className="overflow-auto   ">{tableHead2()}</div>
+            <div className="overflow-auto   ">
+              {activeRowData && tableHead2()}
+            </div>
           </div>
           {/* Description */}
           <div className="w-1/4">
             <div className="bg-purple-200">
               <h4 className="m- text-black">Description</h4>
             </div>
-            <div className="overflow-auto  ">{tableHead2a()}</div>
+            <div className="overflow-auto  ">
+              {activeRowData && tableHead2a()}
+            </div>
           </div>
           {/* Country */}
           <div className="w-2/4">
             <div className="bg-purple-200">
               <h4 className="m- text-black">Country</h4>
             </div>
-            <div className="overflow-auto  ">{tableHead2b()}</div>
+            <div className="overflow-auto  ">
+              {activeRowData && tableHead2b()}
+            </div>
           </div>
           {/* Date */}
           <div className="w-1/4">
             <div className="bg-purple-200">
               <h4 className="m- text-black">Date</h4>
             </div>
-            <div className="overflow-auto  ">{tableHead2c()}</div>
+            <div className="overflow-auto  ">
+              {activeRowData && tableHead2c()}
+            </div>
           </div>
         </div>
 
@@ -803,14 +804,18 @@ export default function TableData() {
             <div className="bg-purple-200">
               <h4 className="m- text-black ">Saction</h4>
             </div>
-            <div className="overflow-auto   ">{tableHead3()}</div>
+            <div className="overflow-auto   ">
+              {activeRowData && tableHead3()}
+            </div>
           </div>
           {/* role */}
-          <div className="">
+          <div className="w-2/5">
             <div className="bg-purple-200">
               <h4 className="m- text-black">Role</h4>
             </div>
-            <div className="overflow-auto  ">{tableHead3b()}</div>
+            <div className="overflow-auto  ">
+              {activeRowData && tableHead3b()}
+            </div>
           </div>
         </div>
 
@@ -819,7 +824,7 @@ export default function TableData() {
           <div className=" flex  items-left  bg-purple-200">
             <h4 className="m-3">Associates</h4>
           </div>
-          <div className="  ">{tableHead4()}</div>
+          <div className="  ">{activeRowData && tableHead4()}</div>
         </div>
       </div>
     </div>
