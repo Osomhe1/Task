@@ -809,7 +809,7 @@ export default function TableData() {
 
 
 
-  useEffect(() => {}, [input])
+  useEffect(() => {setItems([])}, [input])
 
 
   return (

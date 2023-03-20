@@ -38,7 +38,8 @@ export default function TableData() {
         if (cur.id == search) {
           // setItems()
           // setItems(cur => [...cur])
-          setItems(items.concat(cur))
+          setItems(items.concat( cur))
+          // setItems('')
         }
      })
     setActiveRowData(true)
@@ -812,7 +813,9 @@ export default function TableData() {
   }
 
 
-  useEffect(() => {}, [input])
+  useEffect(() => {
+    setItems([])
+  }, [input])
 
 
   return (
