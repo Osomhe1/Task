@@ -114,67 +114,158 @@ export default function TableData() {
             <TableBody>
               {input?.map((x, id) => (
                 <TableRow
-                  className={`bg-${activeRow === x.id ? 'active cursor-pointer  bg-yellow-400' : 'inactive cursor-pointer'}`}
+                  className={`bg-${
+                    activeRow === x.id
+                      ? 'active cursor-pointer  bg-yellow-400'
+                      : 'inactive cursor-pointer'
+                  }`}
                   onClick={() => handleRowClickColor(x.id)}
                   key={x.id}
                 >
                   <TableCell>
-                    <span
-                      onClick={
-                        (e) => handleRowClick(e)
-                        // handleRowClickData(x)
-                      }
+                    <button
+                      onClick={(e) => handleRowClick(e)}
                       id={x.id}
-                      className="w-[20px]"
-                      // className="text-sm w-[20px] "
+                      // className="w-[20px]  "
+                      className="text-sm w-[20px] "
                     >
                       {x?.id}
+                    </button>
+                  </TableCell>
+                  <TableCell className="w-[20px]">
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.action}
                     </span>
                   </TableCell>
                   <TableCell className="w-[20px]">
-                    <span className="text-sm">{x?.action}</span>
-                  </TableCell>
-                  <TableCell className="w-[20px]">
-                    <span className="text-sm">{x?.date_activation}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.gender}</span>
-                  </TableCell>
-                  <TableCell>
-                    <span className="text-sm">{x?.active_status}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.date_activation}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.deceerd}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.gender}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.birth_place}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.active_status}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.address_line}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.deceerd}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.address_city}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.birth_place}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.address_country}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.address_line}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.name_type}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.address_city}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.first_name}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.address_country}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.middle_name}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.name_type}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.Surnname}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.first_name}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.medianName}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.middle_name}
+                    </span>
                   </TableCell>
                   <TableCell>
-                    <span className="text-sm">{x?.suffix}</span>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.Surnname}
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.medianName}
+                    </span>
+                  </TableCell>
+                  <TableCell>
+                    <span
+                      onClick={(e) => handleRowClick(e)}
+                      id={x.id}
+                      className="text-sm"
+                    >
+                      {x?.suffix}
+                    </span>
                   </TableCell>
                   <TableCell>
                     <div className="flex gap-3 items-center cursor-pointer ">
